@@ -1,9 +1,13 @@
 # CHANGELOG
 
-## 1.0.0
+## 1.0.2
 
-Make base version
+* Add change seconds by `setState` function
 
 ## 1.0.1
 
-Add example
+* Add example
+
+## 1.0.0
+
+* Make base version

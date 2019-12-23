@@ -33,6 +33,8 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _showTimer = true;
   int _seconds = 100;
 
+  int _newSeconds = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +61,36 @@ class _MyHomePageState extends State<MyHomePage> {
               Text(
                 'Timer is done!',
               ),
+
+            const Divider(
+              height: 10,
+            ),
+
+            // Small form
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 200,
+                  child: TextField(
+                    decoration: InputDecoration(
+                      hintText: 'Input a seconds in int',
+                    ),
+                    onChanged: (String value) {
+                      _newSeconds = double.parse(value).floor();
+                    },
+                  ),
+                ),
+                RaisedButton(
+                  child: Text('Set seconds'),
+                  onPressed: () {
+                    setState(() {
+                      _seconds = _newSeconds;
+                    });
+                  },
+                ),
+              ],
+            ),
           ],
         ),
       ),

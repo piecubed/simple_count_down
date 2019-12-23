@@ -107,7 +107,7 @@ class _CountDownState extends State<CountDown> {
     String secondsString = seconds.toString().padLeft(2, '0');
 
     return Text(
-      '$minutesString:$secondsString',
+      '$minutesString:$secondsString __',
       style: widget.style,
     );
   }
